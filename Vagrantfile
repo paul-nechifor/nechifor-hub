@@ -15,7 +15,7 @@ Vagrant.configure('2') do |config|
   end
 
   if File.file?('private/token')
-    vmname = 'remote'
+    vmname = 'nechifor-hub'
     config.vm.define vmname.to_sym do |machine|
       machine.vm.host_name = vmname
       machine.vm.provision 'shell', path: 'synced/provision.sh'
@@ -25,7 +25,7 @@ Vagrant.configure('2') do |config|
         override.vm.box_url = 'https://github.com/smdahlen/vagrant-digitalocean/raw/master/box/digital_ocean.box'
 
         provider.token = File.read('private/token').strip
-        provider.image = '14.04 x64'
+        provider.image = 'ubuntu-14-04-x64'
         provider.region = 'ams2'
         provider.size = '1gb'
       end
