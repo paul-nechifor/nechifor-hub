@@ -17,7 +17,7 @@ Vagrant.configure('2') do |config|
   if File.file?('private/token')
     vmname = 'nechifor-hub'
     config.vm.define vmname.to_sym do |machine|
-      machine.vm.host_name = vmname
+      machine.vm.host_name = 'hub.nechifor.net'
       machine.vm.provision 'shell', path: 'synced/provision.sh'
       machine.vm.provider :digital_ocean do |provider, override|
         override.ssh.private_key_path = '~/.ssh/vagrant_do_rsa'

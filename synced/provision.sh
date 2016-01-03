@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/bin/bash -e
+
+packages=(
+    unzip
+)
 
 main() {
     update_packages
@@ -8,7 +12,7 @@ main() {
 update_packages() {
     apt-get update
     apt-get upgrade -y
-    apt-get install unzip
+    apt-get install "${packages[@]}" -y || true
 }
 
 infect() {
