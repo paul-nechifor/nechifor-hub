@@ -1,3 +1,7 @@
+# This repository has been moved to [gitlab.com/paul-nechifor/nechifor-hub](http://gitlab.com/paul-nechifor/nechifor-hub).
+
+Old readme:
+
 # Nechifor Hub
 
 A box I use for coordinating web tasks.
